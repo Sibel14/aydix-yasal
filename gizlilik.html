@@ -14,15 +14,6 @@
         <p class="tarih">Son güncelleme: 30 Ağustos 2026 · Sürüm 1.0.0</p>
       </header>
 
-      <div class="kutu doldur">
-        <p>
-          <strong>Yayımlamadan önce:</strong> 6. bölümdeki Supabase sunucu
-          bölgesi hâlâ doldurulmayı bekliyor (Supabase panelinde
-          <em>Project Settings → General → Region</em>). Yurt dışına aktarımın
-          hangi ülkeye yapıldığı KVKK md. 9 kapsamında açıkça yazılmalıdır.
-        </p>
-      </div>
-
       <p>
         Aydix, aydınlatma projelendirmesi için mekân bilgisi ve fotoğraflarından
         yola çıkarak ürün, güç ve maliyet önerisi üreten bir mobil uygulamadır.
@@ -160,13 +151,30 @@
         </table>
       </div>
 
-      <h2>4. Yurt dışına aktarım</h2>
+      <h2>4. Yurt dışına aktarım (KVKK md. 9)</h2>
       <p>
         Uygulamanın çalışması için verileriniz aşağıdaki hizmet sağlayıcılara
-        aktarılır. Bu sağlayıcıların sunucuları Türkiye dışında bulunabilir;
+        aktarılır. Bu sağlayıcıların sunucuları Türkiye dışında bulunur;
         aktarım KVKK md. 9 kapsamındadır ve fotoğraf gönderimi için
         <strong>açık rızanıza</strong> dayanır.
       </p>
+
+      <div class="kutu">
+        <p>
+          <strong>Fotoğraflarınız hakkında açık beyan:</strong> Aydınlatma
+          analizi için yüklediğiniz mekân fotoğrafları,
+          <strong>Google Gemini API</strong>'ye <strong>anlık olarak</strong>
+          aktarılır. Görüntüler yalnız o analiz isteği süresince işlenir;
+          <strong>ne bizim sunucularımızda ne de sağlayıcıda saklanır</strong>,
+          model eğitiminde kullanılmaz. Analiz sonucu döndüğünde görüntü
+          bellekten düşer — uygulamada silinecek bir fotoğraf birikmez.
+        </p>
+        <p>
+          Hesap, analiz sonuçları, teklifler ve işletme bilgileriniz ise
+          <strong>Almanya'daki (Frankfurt) Supabase sunucularında</strong>
+          saklanır.
+        </p>
+      </div>
       <div class="sarma">
         <table>
           <tr>
@@ -177,12 +185,18 @@
           <tr>
             <td>Supabase</td>
             <td>Hesap, analiz, teklif, işletme bilgileri</td>
-            <td>Veritabanı ve kimlik doğrulama — sunucu bölgesi: [DOLDURULACAK — Supabase panelinde Project Settings → General → Region]</td>
+            <td>
+              Veritabanı ve kimlik doğrulama — sunucu bölgesi:
+              <strong>Central EU (Frankfurt), eu-central-1 — Almanya</strong>
+            </td>
           </tr>
           <tr>
             <td>Google (Gemini)</td>
             <td>Mekân fotoğrafları, sohbet mesajları</td>
-            <td>Görsel analiz ve niyet çözümleme (saklanmaz)</td>
+            <td>
+              Görsel analiz ve niyet çözümleme — anlık işlenir,
+              <strong>saklanmaz</strong>
+            </td>
           </tr>
           <tr>
             <td>RevenueCat</td>
