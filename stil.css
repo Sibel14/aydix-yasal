@@ -1,0 +1,155 @@
+/* Aydix yasal sayfaları — src/theme tokenlarıyla aynı palet */
+:root {
+  --bg: #faf9f6;
+  --yuzey: #ffffff;
+  --kenar: #e7e4dd;
+  --metin: #1c1917;
+  --soluk: #57534e;
+  --vurgu: #b45309;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14120f;
+    --yuzey: #1c1917;
+    --kenar: #2f2a24;
+    --metin: #f5f3ef;
+    --soluk: #b8b1a7;
+    --vurgu: #f59e0b;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 20px 72px;
+  background: var(--bg);
+  color: var(--metin);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 40px 0 8px;
+  border-bottom: 1px solid var(--kenar);
+  margin-bottom: 28px;
+}
+
+.marka {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--vurgu);
+  margin: 0 0 6px;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 36px 0 10px;
+  padding-top: 4px;
+}
+
+h3 {
+  font-size: 17px;
+  margin: 22px 0 6px;
+}
+
+.tarih {
+  color: var(--soluk);
+  font-size: 15px;
+  margin: 0 0 16px;
+}
+
+p,
+li {
+  color: var(--metin);
+}
+
+ul,
+ol {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: var(--vurgu);
+}
+
+code {
+  background: var(--yuzey);
+  border: 1px solid var(--kenar);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.9em;
+}
+
+.kutu {
+  background: var(--yuzey);
+  border: 1px solid var(--kenar);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 20px 0;
+}
+
+.kutu p:first-child {
+  margin-top: 0;
+}
+
+.kutu p:last-child {
+  margin-bottom: 0;
+}
+
+.doldur {
+  border-left: 3px solid var(--vurgu);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+  font-size: 15px;
+}
+
+th,
+td {
+  border: 1px solid var(--kenar);
+  padding: 9px 11px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--yuzey);
+  font-weight: 600;
+}
+
+.sarma {
+  overflow-x: auto;
+}
+
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--kenar);
+  color: var(--soluk);
+  font-size: 15px;
+}
